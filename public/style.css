@@ -1,0 +1,197 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #3498db, #8e44ad); /* Gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff; /* White text color for contrast */
+  }
+  
+  /* Container for login and chat */
+  .container {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px;
+    padding: 30px;
+    background-color: #fff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    color: #333; /* Dark text color */
+  }
+  
+  /* Header Styles */
+  h1, h2 {
+    color: #fff; /* White color for headers */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Login Container */
+  #login-container {
+    text-align: center;
+  }
+  
+  /* Chat container and room list */
+  #chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  #room-list {
+    margin-bottom: 20px;
+  }
+  
+  #rooms {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #rooms li {
+    background-color: #34495e; /* Dark gray for room list items */
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.1em;
+  }
+  
+  #rooms li:hover {
+    background-color: #2c3e50; /* Darker gray on hover */
+  }
+  
+  #create-room {
+    background-color: #e67e22; /* Orange color for the "Create Room" button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+  
+  #create-room:hover {
+    background-color: #d35400; /* Darker orange on hover */
+  }
+  
+  /* Chat Room Styles */
+  #chat-room {
+    background-color: #34495e;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  #room-name {
+    font-size: 1.8em;
+    color: #f1c40f; /* Yellow color for room name */
+    margin-bottom: 20px;
+  }
+  
+  #messages {
+    background-color: #2c3e50;
+    padding: 15px;
+    border-radius: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    border: 1px solid #7f8c8d;
+    color: #ecf0f1; /* Light text color for messages */
+  }
+  
+  /* Chat Message Bubbles */
+  .message {
+    background-color: #3498db; /* Blue for other user's messages */
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    margin: 10px 0;
+    max-width: 70%;
+    word-wrap: break-word;
+  }
+  
+  .message.self {
+    background-color: #2ecc71; /* Green for the user's messages */
+    align-self: flex-end;
+  }
+  
+  .message.system {
+    background-color: #f39c12; /* Yellow for system messages */
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 1.2em;
+  }
+  
+  /* Input Field for Sending Messages */
+  #message-input {
+    width: calc(100% - 60px);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    background-color: #ecf0f1;
+    color: #333;
+  }
+  
+  #send-message {
+    background-color: #e67e22;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    width: 100%;
+  }
+  
+  #send-message:hover {
+    background-color: #d35400; /* Darker orange on hover */
+  }
+  
+  /* Scrollbar Styles */
+  #messages::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  #messages::-webkit-scrollbar-thumb {
+    background-color: #3498db;
+    border-radius: 10px;
+  }
+  
+  #messages::-webkit-scrollbar-thumb:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Centering the container */
+  @media (max-width: 768px) {
+    body {
+      padding: 10px;
+    }
+  
+    .container {
+      padding: 20px;
+      width: 100%;
+    }
+  
+    #message-input {
+      width: calc(100% - 50px);
+    }
+  
+    #send-message {
+      width: 100%;
+    }
+  }
+  
